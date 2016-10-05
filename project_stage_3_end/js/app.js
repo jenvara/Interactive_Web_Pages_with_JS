@@ -23,7 +23,6 @@ var createNewTaskElement = function(taskString) {
   var deleteButton = document.createElement("button");
   
   //Each element needs modifying
-  
   checkBox.type = "checkbox";
   editInput.type = "text";
   
@@ -41,6 +40,7 @@ var createNewTaskElement = function(taskString) {
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
 
+  
   return listItem;
 }
 
@@ -91,6 +91,7 @@ var deleteTask = function() {
   
   //Remove the parent list item from the ul
   ul.removeChild(listItem);
+  
 }
 
 //Mark a task as complete
@@ -131,7 +132,6 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 var ajaxRequest = function() {
   console.log("AJAX request");
 }
-
 //Set the click handler to the addTask function
 addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", ajaxRequest);
